@@ -1,15 +1,17 @@
-document.querySelectorAll('.ramo').forEach(boton => {
-  boton.addEventListener('click', () => {
-    if (boton.classList.contains('locked')) return;
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.ramo').forEach(boton => {
+    boton.addEventListener('click', () => {
+      if (boton.classList.contains('locked') || boton.classList.contains('approved')) return;
 
-    boton.classList.add('approved');
-    const siguiente = boton.getAttribute('data-unlocks');
+      boton.classList.add('approved');
 
-    if (siguiente) {
-      const siguienteElemento = document.getElementById(siguiente);
-      if (siguienteElemento) {
-        siguienteElemento.classList.remove('locked');
+      const siguienteId = boton.dataset.unlocks;
+      if (siguienteId) {
+        const siguienteRamo = document.getElementById(siguienteId);
+        if (siguienteRamo && siguienteRamo.classList.contains('locked')) {
+          siguienteRamo.classList.remove('locked');
+        }
       }
-    }
+    });
   });
 });
