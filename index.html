@@ -1,29 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malla Interactiva</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
 <body>
-  <h1>Malla Interactiva</h1>
+  <h1>Malla Interactiva - Carrera</h1>
+  <div class="malla">
+    <!-- Primer Año -->
+    <div class="semestre">
+      <h2>I Semestre</h2>
+      <button class="ramo" data-nombre="Bioenergética" data-desbloquea="Fisiología">Bioenergética</button>
+      <button class="ramo" data-nombre="Filosofía" data-desbloquea="Teología">Filosofía</button>
+      <button class="ramo" data-nombre="Acondicionamiento físico" data-desbloquea="Aptitudes físicas">Acondicionamiento físico</button>
+      <button class="ramo" data-nombre="Educación y sociedad">Educación y sociedad</button>
+      <button class="ramo" data-nombre="Comunicación en español">Comunicación en español</button>
+    </div>
+    <div class="semestre">
+      <h2>II Semestre</h2>
+      <button class="ramo" data-nombre="Fisiología" data-desbloquea="Anatomía" disabled>Fisiología</button>
+      <button class="ramo" data-nombre="Teología" data-desbloquea="Ética profesional" disabled>Teología</button>
+      <button class="ramo" data-nombre="Aptitudes físicas" disabled>Aptitudes físicas</button>
+      <button class="ramo" data-nombre="PERSPECTIVAS CURRICULARES EN EDUCACIÓN">PERSPECTIVAS CURRICULARES EN EDUCACIÓN</button>
+    </div>
 
-  <div class="fila" data-año="1">
-    <h2>Primer Año</h2>
-    <button class="ramo" id="bioenergetica" data-unlocks="fisiologia">Bioenergética</button>
-    <button class="ramo" id="filosofia" data-unlocks="teologia">Filosofía</button>
-    <button class="ramo" id="acondicionamiento" data-unlocks="aptitudes">Acondicionamiento Físico</button>
-    <button class="ramo" id="educacion_sociedad">Educación y Sociedad</button>
-    <button class="ramo" id="comunicacion" data-unlocks="perspectivas">Comunicación en Español</button>
-    <button class="ramo locked" id="fisiologia" data-unlocks="anatomia">Fisiología</button>
-    <button class="ramo locked" id="teologia" data-unlocks="etica">Teología</button>
-    <button class="ramo locked" id="aptitudes">Aptitudes Físicas</button>
-    <button class="ramo locked" id="perspectivas">Perspectivas Curriculares en Educación</button>
-  </div>
+    <!-- Segundo Año -->
+    <div class="semestre">
+      <h2>III Semestre</h2>
+      <button class="ramo" data-nombre="Anatomía" data-desbloquea="Biomecánica" disabled>Anatomía</button>
+    </div>
+    <div class="semestre">
+      <h2>IV Semestre</h2>
+      <button class="ramo" data-nombre="Biomecánica" disabled>Biomecánica</button>
+    </div>
 
-  <div class="fila" data-año="2">
-    <h2>Segundo Año</h2>
-    <button class="ramo locked" id="anatomia" data-unlocks="biomecanica">Anatomía</button>
-    <button class="ramo locked" id="biomecanica">Biomecánica</button>
-  </div>
-
-  <div class="fila" data-año="3">
-    <h2>Tercer Año</h2>
-    <button class="ramo locked" id="etica">Ética Profesional</button>
+    <!-- Tercer Año -->
+    <div class="semestre">
+      <h2>V Semestre</h2>
+      <button class="ramo" data-nombre="Ética profesional" disabled>Ética profesional</button>
+    </div>
   </div>
 
   <script src="script.js"></script>
 </body>
+</html>
