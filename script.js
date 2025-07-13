@@ -1,15 +1,19 @@
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.ramo').forEach(boton => {
-    boton.addEventListener('click', () => {
-      if (boton.classList.contains('locked') || boton.classList.contains('approved')) return;
+document.addEventListener("DOMContentLoaded", () => {
+  const botones = document.querySelectorAll(".ramo");
 
-      boton.classList.add('approved');
+  botones.forEach(boton => {
+    boton.addEventListener("click", () => {
+      if (boton.disabled) return;
 
-      const siguienteId = boton.dataset.unlocks;
-      if (siguienteId) {
-        const siguienteRamo = document.getElementById(siguienteId);
-        if (siguienteRamo && siguienteRamo.classList.contains('locked')) {
-          siguienteRamo.classList.remove('locked');
+      boton.classList.add("aprobado");
+      boton.disabled = true;
+
+      const desbloquea = boton.dataset.desbloquea;
+
+      if (desbloquea) {
+        const siguiente = Array.from(botones).find(b => b.dataset.nombre === desbloquea);
+        if (siguiente) {
+          siguiente.disabled = false;
         }
       }
     });
