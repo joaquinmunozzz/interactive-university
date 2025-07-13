@@ -1,1 +1,21 @@
-index
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malla Interactiva</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <h1>Malla Interactiva</h1>
+  <div class="malla">
+    <button class="ramo" id="bioenergetica" data-unlocks="fisiologia">Bioenergética</button>
+    <button class="ramo locked" id="fisiologia" data-unlocks="anatomia">Fisiología</button>
+    <button class="ramo locked" id="anatomia" data-unlocks="biomecanica">Anatomía</button>
+    <button class="ramo locked" id="biomecanica">Biomecánica</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
