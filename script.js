@@ -1,4 +1,3 @@
-// script.js
 document.querySelectorAll('.ramo').forEach(boton => {
   boton.addEventListener('click', () => {
     if (boton.classList.contains('locked')) return;
