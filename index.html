@@ -1,36 +1,29 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Malla Interactiva</title>
-  <link rel="stylesheet" href="estilos.css">
-</head>
 <body>
   <h1>Malla Interactiva</h1>
-  <div class="malla">
-    <!-- Primer año - I semestre -->
+
+  <div class="fila" data-año="1">
+    <h2>Primer Año</h2>
     <button class="ramo" id="bioenergetica" data-unlocks="fisiologia">Bioenergética</button>
     <button class="ramo" id="filosofia" data-unlocks="teologia">Filosofía</button>
     <button class="ramo" id="acondicionamiento" data-unlocks="aptitudes">Acondicionamiento Físico</button>
     <button class="ramo" id="educacion_sociedad">Educación y Sociedad</button>
     <button class="ramo" id="comunicacion" data-unlocks="perspectivas">Comunicación en Español</button>
-
-    <!-- Primer año - II semestre -->
     <button class="ramo locked" id="fisiologia" data-unlocks="anatomia">Fisiología</button>
     <button class="ramo locked" id="teologia" data-unlocks="etica">Teología</button>
     <button class="ramo locked" id="aptitudes">Aptitudes Físicas</button>
     <button class="ramo locked" id="perspectivas">Perspectivas Curriculares en Educación</button>
+  </div>
 
-    <!-- Segundo año - III semestre -->
+  <div class="fila" data-año="2">
+    <h2>Segundo Año</h2>
     <button class="ramo locked" id="anatomia" data-unlocks="biomecanica">Anatomía</button>
-
-    <!-- Segundo año - IV semestre -->
     <button class="ramo locked" id="biomecanica">Biomecánica</button>
+  </div>
 
-    <!-- Tercer año - V semestre -->
+  <div class="fila" data-año="3">
+    <h2>Tercer Año</h2>
     <button class="ramo locked" id="etica">Ética Profesional</button>
   </div>
+
   <script src="script.js"></script>
 </body>
-</html>
